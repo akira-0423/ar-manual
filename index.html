@@ -37,7 +37,7 @@
 
     .arrow {
   position: absolute;
-  font-size: 100px;
+  font-size: 96px;
   font-weight: bold;
   color: red;
   animation: blink 1s infinite;
@@ -107,8 +107,7 @@ small {
 
 <div class="photo">
   <img src="machine.jpg" alt="設備写真">
-<div class="arrow arrow1">①⬇</div>
-<div class="arrow arrow2">②⬇</div>
+
 </div>
 
 <a class="video" href="https://youtu.be/XXXX" target="_blank">
@@ -116,8 +115,27 @@ small {
 <small>動画で確認する</small>
 </a>
 
+<style>
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.arrow {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 96px;
+  font-weight: bold;
+  color: red;
+  animation: blink 1s infinite;
+}
+</style>
+  
 </body>
 </html>
+
 
 
 
