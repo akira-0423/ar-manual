@@ -1,32 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <title>AR.js Test</title>
+  <meta charset="UTF-8">
+  <title>設備A 作業手順</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- A-Frame -->
-  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 10px;
+      background: #f5f5f5;
+    }
 
-  <!-- AR.js -->
-  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+    h1 {
+      font-size: 22px;
+    }
+
+    .warning {
+      background: #ffe5e5;
+      border-left: 5px solid red;
+      padding: 10px;
+      margin: 15px 0;
+      font-weight: bold;
+    }
+
+    .photo {
+      position: relative;
+      margin: 15px 0;
+    }
+
+    .photo img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 40%;
+      left: 60%;
+      font-size: 40px;
+      color: red;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .video {
+      display: block;
+      background: #1976d2;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
-<body style="margin:0; overflow:hidden;">
-  <a-scene embedded arjs>
-    <a-marker preset="hiro">
+<body>
 
- <a-marker preset="hiro">
-  <a-box position="0 0.5 0" color="red"></a-box>
-</a-marker>
+<h1>設備A 作業手順</h1>
 
-</a-marker>
+<p>① 電源がOFFになっていることを確認する。</p>
+<p>② 安全カバーを外す。</p>
 
-    <a-entity camera></a-entity>
-  </a-scene>
+<div class="warning">
+⚠ 高温部があります。手袋を必ず着用してください。
+</div>
+
+<div class="photo">
+  <img src="machine.jpg" alt="設備写真">
+  <div class="arrow">⬇</div>
+</div>
+
+<a class="video" href="https://youtu.be/XXXXXXXX" target="_blank">
+▶ 動画で作業を確認する
+</a>
+
 </body>
 </html>
-
-
-
-
-
