@@ -2,32 +2,34 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>設備A 作業手順</title>
+  <title>AR 注意表示</title>
+
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+
+  <!-- AR.js -->
+  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
-<body>
-  <h1>設備A 作業手順</h1>
 
-  <ol>
-    <li>電源スイッチが OFF であることを確認する</li>
-    <li>保護手袋を着用する</li>
-    <li>カバーを開ける</li>
-  </ol>
+<body style="margin: 0; overflow: hidden;">
+  <a-scene
+    embedded
+    arjs="sourceType: webcam; debugUIEnabled: false;"
+  >
+    <!-- マーカー -->
+    <a-marker preset="hiro">
+      <!-- 注意テキスト -->
+      <a-text
+        value="⚠ 注意！\n稼働中は手を入れない"
+        color="red"
+        align="center"
+        position="0 0.5 0"
+        scale="2 2 2">
+      </a-text>
+    </a-marker>
 
-  <p style="color:red; font-weight:bold;">
-    ⚠ 注意：稼働中は手を入れないでください
-  </p>
-
-  <button onclick="openVideo()">
-    作業動画を見る
-  </button>
-
-  <script>
-    function openVideo() {
-      window.open(
-        "https://www.youtube.com/watch?v=XXXXXXXXXXX",
-        "_blank"
-      );
-    }
-  </script>
+    <!-- カメラ -->
+    <a-entity camera></a-entity>
+  </a-scene>
 </body>
 </html>
