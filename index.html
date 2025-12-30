@@ -36,13 +36,25 @@
     }
 
     .arrow {
-      position: absolute;
-      top: 30%;
-      left: 20%;
-      font-size: 100px;
-      color: red;
-      animation: blink 1s infinite;
-    }
+  position: absolute;
+  font-size: 100px;
+  font-weight: bold;
+  color: red;
+  animation: blink 1s infinite;
+}
+
+/* 矢印① */
+.arrow1 {
+  top: 40%;
+  left: 50%;
+}
+
+/* 矢印② */
+.arrow2 {
+  top: 30%;
+  left: 20%;
+}
+}
 
     @keyframes blink {
       50% { opacity: 0; }
@@ -93,7 +105,8 @@ small {
 
 <div class="photo">
   <img src="machine.jpg" alt="設備写真">
-  <div class="arrow">⬇</div>
+<div class="arrow arrow1">①⬇</div>
+<div class="arrow arrow2">②⬇</div>
 </div>
 
 <a class="video" href="https://youtu.be/XXXX" target="_blank">
@@ -103,6 +116,7 @@ small {
 
 </body>
 </html>
+
 
 
 
