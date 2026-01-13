@@ -8,7 +8,13 @@
   </head>
 
   <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
+    <a-scene
+  embedded
+  arjs="sourceType: webcam; debugUIEnabled: false;"
+>
+
+  <!-- クリック・タップ検知用（超重要） -->
+  <a-entity camera cursor="rayOrigin: mouse"></a-entity>
       
     <a-marker preset="hiro">
 
