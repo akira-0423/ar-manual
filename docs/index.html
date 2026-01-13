@@ -9,15 +9,21 @@
 
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
+      
+      <!-- ★必ず a-marker の中 -->
       <a-marker preset="hiro">
+        
+        <!-- 赤い注意文字 -->
         <a-text
-  value="⚠ 注意"
-  position="0 1 0"
-  scale="2 2 2"
-  color="red"
-  align="center">
-</a-text>
+          value="⚠ 注意"
+          position="0 2 0"
+          scale="3 3 3"
+          color="red"
+          align="center">
+        </a-text>
+
       </a-marker>
+
       <a-entity camera></a-entity>
     </a-scene>
   </body>
