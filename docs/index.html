@@ -12,23 +12,24 @@
       
     <a-marker preset="hiro">
 
-  <!-- 赤い丸（②の背景） -->
-  <a-circle
+  <!-- 透明な押せる板（当たり判定） -->
+  <a-plane
     position="0 0.8 0"
     rotation="-90 0 0"
-    radius="0.35"
-    color="red"
+    width="0.8"
+    height="0.8"
+    opacity="0"
     onclick="openPDF()">
-  </a-circle>
+  </a-plane>
 
-  <!-- 赤い数字② -->
+  <!-- 赤い数字②（見た目） -->
   <a-text
     value="②"
     position="0 0.81 0"
     rotation="-90 0 0"
     align="center"
     color="red"
-    scale="2 2 2">
+    scale="3 3 3">
   </a-text>
 
 </a-marker>
